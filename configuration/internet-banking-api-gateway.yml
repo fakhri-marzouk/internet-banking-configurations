@@ -64,9 +64,9 @@ app:
     keycloak:
       #port has been changed
       url: http://localhost:9090/auth
-      realm: javatodev-internet-banking
-      client-secret: 485aaa20-de67-42f4-999a-40ddf6ad2e7d
-      client-id: internet-banking-core-client
+      realm: spring-boot-microservice-realm2
+      client-secret: MDBt3MzSIvdWnncjhk0Ag8MlSRT3IEWz
+      client-id: spring-cloud-client2
 
 server:
   port: 8087
