@@ -17,11 +17,13 @@ spring:
             client-id: ${app.config.keycloak.client-id}
             client-secret: ${app.config.keycloak.client-secret}
             provider: keycloak
-            redirect-uri: http://localhost:8080/login/oauth2/code/keycloak
+            #port has been changed
+            redirect-uri: http://localhost:9090/login/oauth2/code/keycloak
             scope: openid
       resourceserver:
         jwt:
-          jwk-set-uri: ${app.config.keycloak.url}/realms/${app.config.keycloak.realm}/protocol/openid-connect/certs
+          issuer-uri: http://localhost:8070/realms/spring-boot-microservice-realm
+          #jwk-set-uri: ${app.config.keycloak.url}/realms/${app.config.keycloak.realm}/protocol/openid-connect/certs
 
   ## GATEWAY CONFIGURATIONS
   cloud:
@@ -60,7 +62,8 @@ spring:
 app:
   config:
     keycloak:
-      url: http://localhost:8080/auth
+      #port has been changed
+      url: http://localhost:9090/auth
       realm: javatodev-internet-banking
       client-secret: 485aaa20-de67-42f4-999a-40ddf6ad2e7d
       client-id: internet-banking-core-client
