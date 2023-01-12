@@ -18,7 +18,7 @@ spring:
             client-secret: ${app.config.keycloak.client-secret}
             provider: keycloak
             #port has been changed
-            redirect-uri: http://localhost:9090/login/oauth2/code/keycloak
+            redirect-uri: http://localhost:8070/login/oauth2/code/keycloak
             scope: openid
       resourceserver:
         jwt:
@@ -63,7 +63,7 @@ app:
   config:
     keycloak:
       #port has been changed
-      url: http://localhost:9090/auth
+      url: http://localhost:8070/auth
       realm: spring-boot-microservice-realm2
       client-secret: MDBt3MzSIvdWnncjhk0Ag8MlSRT3IEWz
       client-id: spring-cloud-client2
